@@ -1,0 +1,50 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+  <div class="container mt-5">
+    <div class="text-center my-3">
+      <h2>Log in customers/sessions</h2>
+    </div>
+    <%= render "customers/shared/error_messages", resource: resource %>
+    <div class="row mb-3 justify-content-md-center mt-5">
+      <div class="col-form-label col-sm-2">
+        <%= f.label :email, for: "exampleInputEmail1" %>
+      </div>
+      <div class="col-sm-5">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", 
+          class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="row mb-3 justify-content-md-center">
+      <div class="col-form-label col-sm-2">
+        <%= f.label :password, for: "password", class: "col-form-label col-sm-2" %>
+      </div>
+      <div class="col-sm-5">
+        <%= f.password_field :password, autofocus: true, autocomplete: "password", 
+                              class: "form-control" %>
+        <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="row mb-3 justify-content-md-center">
+      <div class="col-form-label col-sm-2">
+        <%= f.label :password_confirmation, for: "password", class: "col-form-label col-sm-2" %>
+      </div>
+      <div class="col-sm-5">
+        <%= f.password_field :password_confirmation, autofocus: true, autocomplete: "password", 
+                              class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="row mb-3 justify-content-md-center mt-5">
+      <div class="col-sm-1">
+        <%= f.submit "Sign up", class: "btn btn-success" %>
+      </div>
+    </div>
+  </div
+
+<% end %>
+
+<%= render "customers/shared/links" %>

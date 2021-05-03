@@ -8,10 +8,12 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.2.1",
     "bootstrap": "^5.0.0-beta3",
+    "rails-erb-loader": "^5.5.2",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
   "devDependencies": {
+    "exports-loader": "^2.0.0",
     "webpack-dev-server": "^3.11.2"
   }
 }

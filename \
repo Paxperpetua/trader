@@ -19,5 +19,6 @@ document.addEventListener("turbolinks:load", function() {
   if ( document.querySelector("#exampleModal") != undefined ) {
     document.querySelector("#exampleButton").click();
   };
+  
 });
 
