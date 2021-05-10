@@ -118,8 +118,8 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
     IEX::Api.configure do |config|
-    config.publishable_token = ENV.fetch('IEX_API_PUBLISHABLE_TOKEN')
-    config.secret_token = ENV.fetch('IEX_API_SECRET_TOKEN')
+    config.publishable_token = ENV('IEX_API_PUBLISHABLE_TOKEN')
+    config.secret_token = ENV('IEX_API_SECRET_TOKEN')
     config.endpoint = 'https://sandbox.iexapis.com/v1' # use 'https://sandbox.iexapis.com/v1' for Sandbox
   end
 
