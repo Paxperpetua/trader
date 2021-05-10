@@ -77,4 +77,10 @@ Rails.application.configure do
   # Add Rack::LiveReload to the bottom of the middleware stack with the default options:
   config.middleware.insert_after ActionDispatch::Static, Rack::LiveReload
 
+  IEX::Api.configure do |config|
+    config.publishable_token = ENV.fetch('IEX_API_PUBLISHABLE_TOKEN')
+    config.secret_token = ENV.fetch('IEX_API_SECRET_TOKEN')
+  config.endpoint = 'https://sandbox.iexapis.com/v1' # use 'https://sandbox.iexapis.com/v1' for Sandbox
+  end
+
 end
