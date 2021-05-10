@@ -4,6 +4,6 @@ class CustomersController < ApplicationController
   end
 
   def my_portfolio
-
+    puts ENV['IEX_API_SECRET_TOKEN']
   end
 end
