@@ -6,8 +6,7 @@ class Stock < ApplicationRecord
       new(ticker_symbol: ticker_symbol, 
           name: client.company(ticker_symbol).company_name,
           last_price: client.price(ticker_symbol))
-    rescue => error
-      puts error
+    rescue
     end
   end
 end
